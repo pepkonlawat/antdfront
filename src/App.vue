@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-sider>Sider</a-layout-sider>
+    <a-layout-sider><component :is="SidebarCardVue" /></a-layout-sider>
     <a-layout>
       <a-layout-header><component :is="nav" /> </a-layout-header>
       <a-layout-content>Content</a-layout-content>
@@ -9,10 +9,14 @@
   </a-layout>
 </template>
 <script setup lang="ts">
-import nav from "./components/Navbar.vue";
+import nav from "./components/Sidebar/Siderbar.vue";
+import SidebarCardVue from "./components/Sidebar/SidebarCard.vue";
 </script>
-<style>
+<style scoped>
 .ant-layout-header {
-  background-color: antiquewhite;
+  background: rgb(204, 136, 46);
+}
+.ant-layout-sider {
+  background: rgb(238, 238, 238);
 }
 </style>
