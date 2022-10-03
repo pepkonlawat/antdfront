@@ -2,10 +2,30 @@
 import SidebarCardVue from "./SidebarCard.vue";
 import { ref } from "vue";
 const items = ref([
-  { id: "CreatePlan", title: "บันทึกแผนการอบรม" },
-  { id: "PlanLists", title: "รายการอบรม" },
-  { id: "UserLists", title: "ผู้ใช้งาน" },
-  { id: "BinLists", title: "ถังขยะ" },
+  {
+    id: "CreatePlan",
+    title: "บันทึกแผนการอบรม",
+    path: "/CreatePlan",
+    description: "กรอกข้อมูลแผนการอบรมให้ครบทุกช่อง",
+  },
+  {
+    id: "PlanLists",
+    title: "รายการอบรม",
+    path: "/PlanLists",
+    description: "แสดงรายการอบรมทั้งหมด",
+  },
+  {
+    id: "UserLists",
+    title: "ผู้ใช้งาน",
+    path: "/UserLists",
+    description: "แสดงรายชื่อผู้ใช้งานทั้งหมด",
+  },
+  {
+    id: "BinLists",
+    title: "ถังขยะ",
+    path: "/BinLists",
+    description: "รายการที่ถูกลบก่อนนำออกจากระบบ",
+  },
 ]);
 </script>
 <template>
@@ -15,11 +35,11 @@ const items = ref([
   <div class="sidebar">
     <ul>
       <li v-for="item in items" :key="item.id">
-        <component :is="SidebarCardVue" title="item.title" />
+        <router-link :to="item.path">
+          <component :is="SidebarCardVue" :title="item.title" />
+        </router-link>
       </li>
     </ul>
-
-    <component :is="SidebarCardVue" />
   </div>
   <div class="logout"><a href="">logout</a></div>
 </template>

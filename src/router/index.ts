@@ -6,7 +6,7 @@ import CreatePlanCourse from "../views/CreatePlan/CreatePlanCourse.vue";
 import CreatePlanDateCost from "../views/CreatePlan/CreatePlanDateCost.vue";
 import CreatePlanResult from "../views/CreatePlan/CreatePlanResult.vue";
 
-import PlanLists from "../views/PlansLists.vue";
+import PlansLists from "../views/PlansLists.vue";
 import PlanDetail from "../views/Plans/PlanDetail.vue";
 import PlanUserReport from "../views/Plans/PlanUserReport.vue";
 
@@ -43,9 +43,9 @@ let routes = [
     component: CreatePlanResult,
   },
   {
-    path: "/PlanLists",
-    name: "PlanLists",
-    component: PlanLists,
+    path: "/PlansLists",
+    name: "PlansLists",
+    component: PlansLists,
   },
   {
     path: "/PlanDetail",

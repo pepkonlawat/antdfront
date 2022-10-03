@@ -1,20 +1,15 @@
-<script>
-import { defineComponent } from "vue";
-import { BookFilled } from "@ant-design/icons-vue";
-export default defineComponent({
-  components: {
-    BookFilled,
-  },
-});
+<script setup lang="ts">
+import { defineComponent, defineProps } from "vue";
+// import { BookFilled } from "@ant-design/icons-vue";
+
 const props = defineProps({
   title: String,
+  path: String,
 });
 </script>
 
-<script setup lang="ts"></script>
-
 <template>
-  <a href="url"></a>
+  <a>{{ props.title }}</a>
 </template>
 <style scoped>
 .container {
