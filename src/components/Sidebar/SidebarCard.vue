@@ -6,21 +6,19 @@ export default defineComponent({
     BookFilled,
   },
 });
+const props = defineProps({
+  title: String,
+});
 </script>
 
 <script setup lang="ts"></script>
 
 <template>
-  <div class="sidebar-card display-flex">
-    <span class="container"
-      ><BookFilled :style="{ fontSize: '25px', color: '#ffff' }"
-    /></span>
-    <label for="CreatePlan">sssssssssss</label>
-  </div>
+  <a href="url"></a>
 </template>
 <style scoped>
 .container {
-  position: absolute;
+  display: flex;
   width: 53px;
   height: 54px;
   background: #4fd1c5;
@@ -28,7 +26,7 @@ export default defineComponent({
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.12),
     0px 2px 4px -1px rgba(0, 0, 0, 0.07);
   border-radius: 10px;
-
+  margin-left: 40px;
   justify-content: center;
   align-items: center;
   margin: 10px;
@@ -36,5 +34,18 @@ export default defineComponent({
 .sidebar-card {
   display: flex;
   align-items: center;
+}
+
+.sidebar-card:hover {
+  width: 300px;
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+}
+label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: SemiBold;
 }
 </style>

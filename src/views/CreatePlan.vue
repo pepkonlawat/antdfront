@@ -1,2 +1,4 @@
 <script setup lang="ts"></script>
-<template></template>
+<template>
+  <a-layout-content>CreatePlan</a-layout-content>
+</template>

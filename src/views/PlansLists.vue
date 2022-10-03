@@ -1,2 +1,4 @@
 <script setup lang="ts"></script>
-<template></template>
+<template>
+  <a-layout-content>PlanLists</a-layout-content>
+</template>

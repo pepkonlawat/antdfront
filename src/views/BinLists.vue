@@ -1,2 +1,4 @@
 <script setup lang="ts"></script>
-<template></template>
+<template>
+  <a-layout-content>BinLists</a-layout-content>
+</template>
